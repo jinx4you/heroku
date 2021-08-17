@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- bootstrap scripts -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  <title>CrazyPoker hand</title>
+
+
+
+</head>
+
+<body class="">
+
+  <!-- Heading and buttons -->
+  <div class="row">
+    <div class="col lg-9">
+      <h1 id="demo" class="black"> Lets Play some Heads Up Poker</h1>
+    </div>
+    <div class="row">
+
+
+      <div class="col-lg-3 ">
+
+        <form>
+          <button id="dealBtn" class="btn btn-danger deal" type="button" name="button" onclick="cardDistribute(2)">Deal</button>
+        </form>
+      </div>
+      <div class="col-lg-3">
+        <form class="">
+          <button id="flopBtn" class="btn btn-danger flop" type="button" name="button" onclick="dealFlop()">Flop</button>
+        </form>
+      </div>
+      <div class="col-lg-3">
+        <form class="">
+          <button id="turnBtn" class="btn btn-danger turn" type="button" name="button" onclick="dealTurn()">Turn</button>
+        </form>
+      </div>
+      <div class="col-lg-3">
+        <form class="">
+          <button id="riverBtn" class="btn btn-danger river" type="button" name="button" onclick="dealRiver()">River</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<!-- card section with player 1, Player 2 and Hand (flop/turn/river) -->
+
+  <main>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-3 rounded-3 shadow-sm">
+          <div class="card-header py-3 text-black bg-success border-primary">
+            <h4 class="my-0 fw-normal">Player1</h4>
+          </div>
+          <div class="card-body">
+            <img id="pfir" class="dealCard" src="images/Deck/reddeck.PNG" alt="reddeck.PNG"></img>
+            <img class="dealCard" src="images/Deck/reddeck.PNG" alt="reddeck.PNG"></img>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-6 rounded-3 shadow-sm">
+          <div class="card-header py-3 text-black bg-success border-primary">
+            <h4 class="my-0 fw-normal">Hands</h4>
+          </div>
+          <div class="card-body">
+            <img class="deckImage flopCard" src="images/Deck/reddeck.PNG" alt="reddeck.PNG"></img>
+            <img class="deckImage flopCard" src="images/Deck/reddeck.PNG" alt="reddeck.PNG"></img>
+            <img class="deckImage flopCard" src="images/Deck/reddeck.PNG" alt="reddeck.PNG"></img>
+            <img class="deckImage turnCard" src="images/Deck/reddeck.PNG" alt="reddeck.PNG"></img>
+            <img class="deckImage riverCard" src="images/Deck/reddeck.PNG" alt="reddeck.PNG"></img>
+
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-black bg-success border-primary">
+            <h4 class="my-0 fw-normal">Player 2</h4>
+          </div>
+          <div class="card-body">
+            <img class="dealCard" src="images/Deck/reddeck.PNG" alt="reddeck.PNG"></img>
+            <img class="dealCard" src="images/Deck/reddeck.PNG" alt="reddeck.PNG"></img>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- reset button - reloads the page -->
+
+    <div class="col-lg-3">
+      <form class="" action="/reset.html" method="post">
+        <button id="reset" class="btn btn-info reset" type="button" name="button" onclick="document.location.reload(true)">Reset</button>
+      </form>
+    </div>
+
+ <!-- js external file path -->
+
+    <script src="js/function.js"></script>
+
+</body>
+
+<!-- footer -->
+
+<footer class="mt-auto text-white-50">
+  <p>&copy; CrazyPoker</p>
+</footer>
+
+
+</html>
