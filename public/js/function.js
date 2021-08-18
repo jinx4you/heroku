@@ -9,6 +9,7 @@ var list = ['AC', '2C', '3C', '4C', '5C', '6C', '7C',
   '4S', '5S', '6S', '7S', '8S', '9S', '10S',
   'JS', 'QS', 'KS'
 ];
+console.log(list);
 var playerCards = [];
 var flop = [];
 var turn = [];
@@ -29,7 +30,7 @@ function cardDistribute(numberOfPlayers) {
 function initialDeal() {
   random = Math.floor(Math.random() * list.length);
   playerCards.push(list[random]);
-
+// console.log(random);
   list = removeCard(list, list[random]);
 };
 
@@ -47,8 +48,9 @@ function removeCard(arr, value) {
 
 function dealFlop() {
   for (var i = 0; i < 3; i++) {
-    random = Math.floor(Math.random() * list.length);
+    random = Math.floor(Math.random() * list.length-1);
     flop.push(list[random]);
+    // console.log(random);
     document.getElementsByClassName("flopCard")[i].src = "images/Deck/" + (flop[i]) + ".PNG";
     list = removeCard(list, list[random]);
   }
@@ -59,6 +61,7 @@ function dealFlop() {
 function dealTurn() {
   random = Math.floor(Math.random() * list.length);
   turn.push(list[random]);
+  // console.log(random);
   document.getElementsByClassName("turnCard")[0].src = "images/Deck/" + (turn[0]) + ".PNG";
   list = removeCard(list, list[random]);
 };
@@ -69,8 +72,11 @@ function dealTurn() {
 function dealRiver() {
   random = Math.floor(Math.random() * list.length);
   river.push(list[random]);
+
   document.getElementsByClassName("riverCard")[0].src = "images/Deck/" + (river[0]) + ".PNG";
   list = removeCard(list, list[random]);
+    // function (){
+    //   console.log(random);};
 };
 
 // ---club creation and user validation----

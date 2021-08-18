@@ -1,4 +1,5 @@
-
+var list1 =[1,2];
+console.log(list1);
 // Requiring express NPM
 const express = require('express');
 const app = express();
